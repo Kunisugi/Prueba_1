@@ -1,0 +1,40 @@
+<article>
+  <section>
+    <fieldset>
+    <label for="">Ingrese el rut de Alumno: </label>
+    <input type="text" name="rut" [value]="registrarAlum.rut"
+    (input)="rutAlum($event)"><br>
+    {{registrarAlum.rut}}
+    </fieldset>
+
+    <fieldset>
+    <label for="">Ingrese el nombre del Alumno: </label>
+    <input type="text" name="nombre" [value]="registrarAlum.nombre"
+    (input)="nombreAlum($event)">
+    </fieldset>
+
+    <fieldset>
+    <label for="">Ingrese el apellido de Alumno: </label>
+    <input type="text" name="apellido" [value]="registrarAlum.apellido"
+    (input)="apellidoAlum($event)">
+    </fieldset>
+
+    <fieldset>
+    <label for="">Ingrese edad: </label>
+    <input type="number" name="edad" [value]="registrarAlum.edad"
+    (input)="edadAlum($event)">
+    </fieldset>
+
+    <fieldset>
+    <label for="">Escoja seccion: </label>
+    <select>
+      <option value="">seccion </option>
+    </select>
+    </fieldset>
+
+    <fieldset>
+    <button type="button" role="button" (click)="registrarAlumno()">Registrar Alumno</button>
+  </fieldset>
+
+  </section>
+</article>
