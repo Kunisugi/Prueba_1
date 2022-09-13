@@ -1,3 +1,7 @@
+<app-formulario-seccion
+(salidaSeccion)="agregarSeccion($event)"></app-formulario-seccion>
+
+
 <article>
   <section>
     <fieldset>
@@ -28,7 +32,7 @@
     <fieldset>
     <label for="">Escoja seccion: </label>
     <select>
-      <option value="">seccion </option>
+      <option *ngFor="let i of Aseccion" [value]="i.nombre_sec">{{i.nombre_sec}} </option>
     </select>
     </fieldset>
 

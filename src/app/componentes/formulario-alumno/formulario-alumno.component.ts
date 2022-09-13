@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter} from '@angular/core';
 import { Alumno } from 'src/app/modelo/alumno';
+import { Seccion } from 'src/app/modelo/seccion';
 
 @Component({
   selector: 'app-formulario-alumno',
@@ -8,6 +9,7 @@ import { Alumno } from 'src/app/modelo/alumno';
 })
 export class FormularioAlumnoComponent{
 @Output() public salidaAlum = new EventEmitter<Alumno>();
+public Aseccion: Array<Seccion>=[];
 public registrarAlum: Alumno = {
   rut: '',
   nombre: '',
@@ -47,9 +49,11 @@ public registrarAlumno(): void{
   this.registrarAlum.edad = 0,
   this.registrarAlum.seccion = { id_sec: 0, nombre_sec: ''}
   console.log(r1)
-
-
-
+}
+public agregarSeccion(seccion : Seccion): void{
+const id: number = this.Aseccion.length + 1;
+seccion.id_sec = id;
+this.Aseccion.push(seccion)
 }
 
 

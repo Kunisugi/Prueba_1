@@ -1,1 +1,12 @@
-<p>formulario-seccion works!</p>
+<section>
+  <fieldset>
+    <h2>Crea la sección</h2>
+    <label for="">Ingresa el nombre de la seccion: </label>
+    <input type="text" name="nombreSeccion" [value]="nuevaSeccion.nombre_sec"
+    (input)="alumSeccion($event)">
+    {{nuevaSeccion.nombre_sec}}
+  </fieldset>
+    <button type="button" role="button" (click)="guardarSeccion()">
+      Registra la seccion
+    </button>
+</section>
