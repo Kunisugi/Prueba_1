@@ -1,20 +1,20 @@
 <p *ngIf="alumno.rut; then rutIf; else rutElse"></p>
 
-<ng-template #rutIf><p>{{alumno.rut}}</p></ng-template>
+<ng-template #rutIf><p>Rut: {{alumno.rut}}</p></ng-template>
 <ng-template #rutElse><p>No ingreso el rut</p></ng-template>
 
 
 <p *ngIf="alumno.nombre; then nombreIf; else nombreElse"></p>
-<ng-template #nombreIf><p>{{alumno.nombre}}</p></ng-template>
+<ng-template #nombreIf><p>Nombre: {{alumno.nombre | uppercase}}</p></ng-template>
 <ng-template #nombreElse><p>No ingreso un nombre correspondiente</p></ng-template>
 
 <p *ngIf="alumno.apellido; then apellidoIf; else apellidoElse"></p>
-<ng-template #apellidoIf><p>{{alumno.apellido}}</p></ng-template>
-<ng-template #apellidoElse>No ingreso un apellido correspondiente</ng-template><br><br>
+<ng-template #apellidoIf><p>Apellido: {{alumno.apellido | lowercase}}</p></ng-template>
+<ng-template #apellidoElse>No ingreso un apellido correspondiente <br></ng-template>
 
 
 <p *ngIf="alumno.edad; then edadIf; else edadElse"></p>
-<ng-template #edadIf>{{alumno.edad}}</ng-template>
+<ng-template #edadIf>Edad: {{alumno.edad}}</ng-template>
 <ng-template #edadElse>Alumno sin edad</ng-template>
 
 <p>{{alumno.seccion}}</p>
